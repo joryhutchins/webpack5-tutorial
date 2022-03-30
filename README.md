@@ -58,3 +58,19 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 - create html template that webpack will use to build /dist/index.html file
 
 - adding [contenthash] to the bundle name will allow it to cache unless changes are made
+
+
+5 - Webpack Dev Server
+
+- add dev script to package.json
+-- "dev": "webpack serve"
+
+- install webpack-dev-server
+-- npm i -D webpack-dev-server
+
+- add devServer config options to webpack config file to configure webpack dev server
+-- https://webpack.js.org/configuration/dev-server/
+
+- add 'clean: true' to output to only keep most recent bundle file
+
+- add 'devTool: 'source-map' to config file to help with debugging

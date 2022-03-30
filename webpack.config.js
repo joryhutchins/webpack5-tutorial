@@ -25,7 +25,26 @@ module.exports = {
         
         // [name] takes the name in config in the entry and creates the file using that value
         // [contenthash] automatically caches the bundle unless changes are made - https://webpack.js.org/guides/caching/
-        filename: '[name][contenthash].js'
+        filename: '[name][contenthash].js',
+
+        // only keeps the most recent compiled file
+        clean: true
+    },
+
+    // Creates a js.map source file - helps with debugging
+    devtool: 'source-map',
+
+    // Adding config options for the webpack dev server
+    // https://webpack.js.org/configuration/dev-server/
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'dist')
+        },
+        port: 3000,
+        open: true,
+        hot: true,
+        compress: true,
+        historyApiFallback: true
     },
 
     // In order to build and compile the Sass styling, we need to create a module for the loader
