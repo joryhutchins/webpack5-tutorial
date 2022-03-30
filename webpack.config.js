@@ -28,7 +28,10 @@ module.exports = {
         filename: '[name][contenthash].js',
 
         // only keeps the most recent compiled file
-        clean: true
+        clean: true,
+
+        // keep the asset name and extension
+        assetModuleFilename: '[name][ext]'
     },
 
     // Creates a js.map source file - helps with debugging
@@ -66,6 +69,12 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
+            },
+            {
+                // Any image files will be handled with this loader
+                // 'i' at the end makes it case insensitive
+                test:/\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource'
             }
         ]
     },

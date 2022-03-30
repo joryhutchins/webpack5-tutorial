@@ -83,3 +83,16 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 -- https://babeljs.io/docs/en/
 
 - add a rule for babel-loader
+
+
+7 - Asset Resource Loader
+
+- create folder called /assets/
+
+- add svg image to assets folder
+
+- import into index.js
+
+- add new rule to use already existing asset resource loader in webpack for image files
+
+- add img to html template and add JS to add the images src to the template element by ID
