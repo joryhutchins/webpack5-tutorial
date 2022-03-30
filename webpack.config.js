@@ -22,6 +22,17 @@ module.exports = {
         
         // [name] takes the name in config in the entry and creates the file using that value
         filename: '[name].js'
+    },
+
+    // In order to build and compile the Sass styling, we need to create a module for the loader
+    module: {
+        rules: [
+            {
+                // Any files that end with.scss -> apply these loaders
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            }
+        ]
     }
 
 }

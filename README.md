@@ -23,3 +23,23 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 -- webpack.config.js
 
 - add entry and output configurations
+
+
+3 - Loaders & Sass Compiling
+
+- install sass & loaders
+--  npm i -D sass style-loader css-loader sass-loader
+
+- sass
+-- https://www.npmjs.com/package/sass
+
+- style-loader
+-- https://www.npmjs.com/package/style-loader
+
+- css-loader
+-- https://www.npmjs.com/package/css-loader
+
+- sass-loader
+--https://www.npmjs.com/package/sass-loader
+
+- add module to use loaders on build for .scss files
