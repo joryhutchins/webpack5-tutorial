@@ -1,7 +1,11 @@
 # webpack5-tutorial
-https://www.youtube.com/watch?v=IZGNcSuwBZs
+[Source Content](https://www.youtube.com/watch?v=IZGNcSuwBZs)
 
-1 - Initial Setup
+> This repo is broken up by branches to show the creation of a basic Webpack 5 server from scratch. Each branch will build upon the previous branch and main has the fully completed Webpack 5 server.
+
+>  This repo should be able to be cloned and used as a starting point for basic dev projects.
+
+## 1. Initial Setup
 
 - add .gitignore file
 -- see https://gist.github.com/andreasonny83/b24e38b7772a3ea362d8e8d238d5a7bc for js template
@@ -17,7 +21,7 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 -- "build": "webpack --mode production"
 
 
-2 - Webpack Config
+## 2. Webpack Config
 
 - create config file in root
 -- webpack.config.js
@@ -25,7 +29,7 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 - add entry and output configurations
 
 
-3 - Loaders & Sass Compiling
+## 3.Loaders & Sass Compiling
 
 - install sass & loaders
 --  npm i -D sass style-loader css-loader sass-loader
@@ -45,7 +49,7 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 - add module to use loaders on build for .scss files
 
 
-4 - Plugins
+## 4.Plugins
 
 - install html webpack plugin
 -- npm i -D html-webpack-plugin
@@ -60,7 +64,7 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 - adding [contenthash] to the bundle name will allow it to cache unless changes are made
 
 
-5 - Webpack Dev Server
+## 5.Webpack Dev Server
 
 - add dev script to package.json
 -- "dev": "webpack serve"
@@ -76,7 +80,7 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 - add 'devTool: 'source-map' to config file to help with debugging
 
 
-6 - Babel Loader
+## 6.Babel Loader
 
 - install babel for backwards compatibility
 -- npm i -D babel-loader @babel/core @babel/preset-env
@@ -85,7 +89,7 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 - add a rule for babel-loader
 
 
-7 - Asset Resource Loader
+## 7.Asset Resource Loader
 
 - create folder called /assets/
 
@@ -98,7 +102,7 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 - add img to html template and add JS to add the images src to the template element by ID
 
 
-8 - Wrapping Up The App
+## 8.Wrapping Up The App
 
 - Re-adding /dist/ to .gitignore
 
@@ -107,7 +111,7 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 -- https://www.npmjs.com/package/axios
 
 
-9 - Webpack Analyzer
+## 9.Webpack Analyzer
 
 - install webpack bundle analyzer
 -- npm i -D webpack-bundle-analyzer
