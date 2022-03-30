@@ -2,6 +2,9 @@
 // https://nodejs.org/api/path.html
 const path = require('path')
 
+// https://www.npmjs.com/package/html-webpack-plugin
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
     // note: now that mode is set here, we can remove  --mode production from package.json
     mode: 'development',
@@ -21,7 +24,8 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         
         // [name] takes the name in config in the entry and creates the file using that value
-        filename: '[name].js'
+        // [contenthash] automatically caches the bundle unless changes are made - https://webpack.js.org/guides/caching/
+        filename: '[name][contenthash].js'
     },
 
     // In order to build and compile the Sass styling, we need to create a module for the loader
@@ -33,6 +37,18 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
-    }
+    },
+
+    // Load any plugins inside here
+    plugins: [
+
+        // Initialize plugin with any needed configuration options
+        // https://github.com/jantimon/html-webpack-plugin#options
+        new HtmlWebpackPlugin({
+            title: 'Webpack Tutorial',
+            filename: 'index.html',
+            template: 'src/template.html'
+        })
+    ]
 
 }

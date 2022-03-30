@@ -43,3 +43,18 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 --https://www.npmjs.com/package/sass-loader
 
 - add module to use loaders on build for .scss files
+
+
+4 - Plugins
+
+- install html webpack plugin
+-- npm i -D html-webpack-plugin
+-- https://www.npmjs.com/package/html-webpack-plugin
+
+- import it into webpack config file
+
+- setup plugin section & configure plugin with options
+
+- create html template that webpack will use to build /dist/index.html file
+
+- adding [contenthash] to the bundle name will allow it to cache unless changes are made
