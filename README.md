@@ -96,3 +96,12 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 - add new rule to use already existing asset resource loader in webpack for image files
 
 - add img to html template and add JS to add the images src to the template element by ID
+
+
+8 - Wrapping Up The App
+
+- Re-adding /dist/ to .gitignore
+
+- Add axios for making API calls within application (there are many other options here)
+-- npm i axios
+-- https://www.npmjs.com/package/axios
