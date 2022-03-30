@@ -15,3 +15,11 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 
 - create script to build webpack
 -- "build": "webpack --mode production"
+
+
+2 - Webpack Config
+
+- create config file in root
+-- webpack.config.js
+
+- add entry and output configurations
