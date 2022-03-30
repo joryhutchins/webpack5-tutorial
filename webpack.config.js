@@ -54,6 +54,18 @@ module.exports = {
                 // Any files that end with.scss -> apply these loaders
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                // Any files that end with .js -> apply these loaders
+                // Exclude node_modules to not mess with node packages
+                test:/\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
             }
         ]
     },

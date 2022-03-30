@@ -74,3 +74,12 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 - add 'clean: true' to output to only keep most recent bundle file
 
 - add 'devTool: 'source-map' to config file to help with debugging
+
+
+6 - Babel Loader
+
+- install babel for backwards compatibility
+-- npm i -D babel-loader @babel/core @babel/preset-env
+-- https://babeljs.io/docs/en/
+
+- add a rule for babel-loader
