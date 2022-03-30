@@ -5,6 +5,9 @@ const path = require('path')
 // https://www.npmjs.com/package/html-webpack-plugin
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+// https://www.npmjs.com/package/webpack-bundle-analyzer
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 module.exports = {
     // note: now that mode is set here, we can remove  --mode production from package.json
     mode: 'development',
@@ -88,7 +91,10 @@ module.exports = {
             title: 'Webpack Tutorial',
             filename: 'index.html',
             template: 'src/template.html'
-        })
+        }),
+
+        // Adding bundle analyzer plugin
+        new BundleAnalyzerPlugin()
     ]
 
 }

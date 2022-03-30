@@ -105,3 +105,14 @@ https://www.youtube.com/watch?v=IZGNcSuwBZs
 - Add axios for making API calls within application (there are many other options here)
 -- npm i axios
 -- https://www.npmjs.com/package/axios
+
+
+9 - Webpack Analyzer
+
+- install webpack bundle analyzer
+-- npm i -D webpack-bundle-analyzer
+-- https://www.npmjs.com/package/webpack-bundle-analyzer
+
+- add to webpack config file
+
+- gives a visual representation of how big the webpack bundle is and where the size is coming from
